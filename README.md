@@ -15,6 +15,7 @@ For this lab you will
 - write the db helper methods for the `schemes` resource in `./schemes/scheme-model.js`
 
 - DONE Fork, clone, add TL as collaborator, npm install
+- DONE Created new branch, initial push and commit
 
 ### Multi Table Queries
 
