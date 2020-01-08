@@ -8,15 +8,12 @@ function findById(id) {
     return db("schemes").where({ id }).first()
 }
 
-// SELECT "Schemes".scheme_name, "Steps".step_number, "Steps".instructions FROM "Schemes"
-// JOIN "Steps" 
-// ON "Schemes".Id = "Steps".scheme_id
-// ORDER BY "Schemes".scheme_name, "Steps".step_number;
-async function findSteps(id) {
-    await db("schemes").where({ id })
+function findSteps(id) {
+    return db("schemes")
         .join("steps", "schemes.id", "steps.scheme_id")
         .select("schemes.scheme_name", "steps.step_number", "steps.instructions")
-        .orderBy("schemes.scheme_name", "steps.step_number")
+        .orderBy("steps.step_number")
+        .where("steps.scheme_id", id)
 }
 
 async function add(scheme) {
