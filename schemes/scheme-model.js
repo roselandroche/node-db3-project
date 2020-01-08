@@ -27,7 +27,7 @@ async function add(scheme) {
 // Not working - times out
 async function update(changes, id) {
     await db("schemes")
-        where({ id })
+        .where({ id })
         .update(changes)
     return findById(id)
 }
