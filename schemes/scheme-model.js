@@ -24,7 +24,6 @@ async function add(scheme) {
     return db("schemes").where({ id }).first()
 }
 
-// Not working - times out
 async function update(changes, id) {
     await db("schemes")
         .where({ id })
