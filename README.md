@@ -12,7 +12,9 @@
 For this lab you will
 
 - write SQL statements against the `northwind.db3` database. Once you have the correct SQL Statement for each query, write it inside the _queries.sql_ file under the corresponding comment.
+
 - write the db helper methods for the `schemes` resource in `./schemes/scheme-model.js`
+
 
 - DONE Fork, clone, add TL as collaborator, npm install
 - DONE Created new branch, initial push and commit
@@ -22,9 +24,13 @@ For this lab you will
 Use a graphical tool like `SQLite Studio` to open `./data/northwind.db3` and execute the following queries:
 
 - Display the ProductName and CategoryName for all products in the database. Returns 77 records.
+DONE
 - Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Returns 429 records.
+DONE
 - Display the name and quantity of the products ordered in order with Id 10251. Sort by ProductName. Returns 3 records.
-- Display the OrderID, curstomer's Company Name and the employee's Last Name for every order. All columns should be labeled clearly. Returns 16,789 records.
+DONE
+- Display the OrderID, customer's Company Name and the employee's Last Name for every order. All columns should be labeled clearly. Returns 16,789 records.
+DONE
 
 ### Database Methods
 
