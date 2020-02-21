@@ -12,18 +12,25 @@
 For this lab you will
 
 - write SQL statements against the `northwind.db3` database. Once you have the correct SQL Statement for each query, write it inside the _queries.sql_ file under the corresponding comment.
+
 - write the db helper methods for the `schemes` resource in `./schemes/scheme-model.js`
 
+
 - DONE Fork, clone, add TL as collaborator, npm install
+- DONE Created new branch, initial push and commit
 
 ### Multi Table Queries
 
 Use a graphical tool like `SQLite Studio` to open `./data/northwind.db3` and execute the following queries:
 
 - Display the ProductName and CategoryName for all products in the database. Returns 77 records.
+DONE
 - Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Returns 429 records.
+DONE
 - Display the name and quantity of the products ordered in order with Id 10251. Sort by ProductName. Returns 3 records.
-- Display the OrderID, curstomer's Company Name and the employee's Last Name for every order. All columns should be labeled clearly. Returns 16,789 records.
+DONE
+- Display the OrderID, customer's Company Name and the employee's Last Name for every order. All columns should be labeled clearly. Returns 16,789 records.
+DONE
 
 ### Database Methods
 
@@ -32,27 +39,38 @@ Write helpers methods in `./schemes/scheme-model.js` that match the following sp
 - `find()`:
   - Calling find returns a promise that resolves to an array of all schemes in the database.
   - No steps are included.
+DONE
+
 - `findById(id)`:
   - Expects a scheme `id` as its only parameter.
   - Resolve to a single scheme object.
   - On an invalid `id`, resolves to `null`.
+DONE
+
 - `findSteps(id)`:
   - Expects a scheme `id`.
   - Resolves to an array of all correctly ordered step for the given scheme: `[ { id: 17, scheme_name: 'Find the Holy Grail', step_number: 1, instructions: 'quest'}, { id: 18, scheme_name: 'Find the Holy Grail', step_number: 2, instructions: '...and quest'}, etc. ]`.
   - This array should include the `scheme_name` _not_ the `scheme_id`.
+DONE
+
 - `add(scheme)`:
   - Expects a scheme object.
   - Inserts scheme into the database.
   - Resolves to the newly inserted scheme, including `id`.
+DONE
+
 - `update(changes, id)`:
   - Expects a changes object and an `id`.
   - Updates the scheme with the given id.
   - Resolves to the newly updated scheme object.
+DONE
+
 - `remove(id)`:
   - Removes the scheme object with the provided id.
   - Resolves to the removed scheme
   - Resolves to `null` on an invalid id.
   - (Hint: Only worry about removing the `scheme`. The database is configured to automatically remove all associated steps.)
+DONE
 
 #### Schemes Schema
 
